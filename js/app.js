@@ -80,7 +80,7 @@ function showCard() {
         clearInterval(time);
         Swal.fire({
           title: "<h2>congratulations</h2>",
-          html: 'you have earned <strong style="color:#363a8d; text-shadow:3px 3px 3px #000">' + starCount + ' <i class="fa fa-star"> </i> </strong> <br> and you completed this game with the time of <br><span style="color:#363a8d">' + hours + ' hours :' + min + 'minutes : ' + sec + 'seconds</span>',
+          html: 'you have earned <strong style="color:#363a8d;">' + starCount + ' <i class="fa fa-star"> </i> </strong> <br> and you completed this game with the time of <br><span style="color:#363a8d">' + hours + ' hours :' + min + 'minutes : ' + sec + 'seconds</span>',
           confirmButtonText: '<i class="fa fa-thumb-up"></i> Restart',
         }).then(() => {
           document.location.reload();
