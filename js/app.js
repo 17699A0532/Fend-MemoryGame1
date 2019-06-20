@@ -80,7 +80,7 @@ function showCard() {
         clearInterval(time);
         Swal.fire({
           title: "<h2>congratulations</h2>",
-          html: 'you have earned <strong style="color:#363a8d;">' + starCount + ' <i class="fa fa-star"> </i> </strong> <br> and you completed this game with the time of <br><span style="color:#363a8d">' + hours + ' hours :' + min + 'minutes : ' + sec + 'seconds</span>',
+          html: 'you have earned <strong style="color:#363a8d;">' + starCount + ' <i class="fa fa-star"> </i> </strong> <br> and you completed this game with the time of <br><span style="color:#363a8d">' + hours + ' hours :' + min + 'minutes : ' + sec + 'seconds'+'<br> Moves taken to complete the game'+moves+'</span>',
           confirmButtonText: '<i class="fa fa-thumb-up"></i> Restart',
         }).then(() => {
           document.location.reload();
@@ -121,9 +121,6 @@ function startTimer() {
     timeArea.innerHTML = hours + " ::" + min + " :: " + sec;
   }, 1000)
 }
-// if(matchedCards.length==16){
-//   clearInterval(time);
-// }
 
 /*
  * set up the event listener for a card. If a card is clicked:
@@ -140,7 +137,7 @@ function starRating() {
     starCount = 2;
     starSection[2].style.display = "none";
   }
-  if (moves >= 18) {
+  if (moves > 18) {
     starCount = 1;
     starSection[1].style.display = "none";
   }
